@@ -80,7 +80,7 @@ export default function AskReflectPage() {
             />
             <textarea
               name="message"
-              placeholder="What's on your heart or mind?"
+              placeholder="What&apos;s on your heart or mind?"
               value={form.message}
               onChange={handleChange}
               required

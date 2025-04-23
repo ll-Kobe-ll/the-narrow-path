@@ -10,9 +10,6 @@ import {
   LogIn,
   UserPlus,
   LogOut,
-  Book,
-  BookA,
-  BookIcon,
   BookPlus,
 } from "lucide-react" // Icon set
 import { useUser } from "@/utils/useUser" // Custom hook to track Supabase user
