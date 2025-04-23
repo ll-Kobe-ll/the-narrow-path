@@ -18,7 +18,7 @@ export default function AskReflectPage() {
     try {
       console.log("Submitting form:", form)
   
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/22624977/2xp79gs/", {
+      const response = await fetch("/api/submit", {
         method: "POST",
         headers: {
           "Accept": "application/json",
