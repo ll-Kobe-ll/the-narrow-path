@@ -16,22 +16,22 @@ export default function AskReflectPage() {
     setLoading(true)
   
     try {
+      console.log("Submitting form:", form)
+  
       const response = await fetch("https://hooks.zapier.com/hooks/catch/22624977/2xp79gs/", {
         method: "POST",
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          message: form.message
-        })
+        body: JSON.stringify(form)
       })
   
+      console.log("Response status:", response.status)
+      const responseBody = await response.text()
+      console.log("Response body:", responseBody)
+  
       if (!response.ok) {
-        const errorText = await response.text()
-        console.error("Zapier response not ok:", errorText)
         alert("Something went wrong submitting your message.")
         return
       }
@@ -44,8 +44,7 @@ export default function AskReflectPage() {
     } finally {
       setLoading(false)
     }
-  }
-  
+  }  
 
   return (
     <main className="min-h-screen flex items-center justify-center text-white font-serif bg-gradient-to-b from-[#221e1f] to-black p-6 relative">
