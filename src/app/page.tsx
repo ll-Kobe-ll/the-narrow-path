@@ -14,7 +14,8 @@ import {
 } from "lucide-react" // Icon set
 import { useUser } from "@/utils/useUser" // Custom hook to track Supabase user
 import { supabase } from "@/utils/supabaseClient" // Supabase client instance
-import { BookOpenText, ScrollText, MessageSquarePlus } from "lucide-react"
+import { ScrollText, MessageSquarePlus } from "lucide-react"
+import Image from "next/image"
 
 export default function HomePage() {
   // Get the current user (or null if not logged in)
@@ -38,11 +39,13 @@ export default function HomePage() {
       {/* Main Content Area */}
       <div className="flex-1 bg-gradient-to-b from-[#221e1f] to-black p-10 flex flex-col items-center relative overflow-hidden">
         {/* Background Christ Icon */}
-        <img
-          src="/images/Jesus Icon.png"
-          alt="Christ Icon"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-33 w-[500px] md:w-[650px] z-0 pointer-events-none select-none blur-[1px]"
-        />
+        <Image
+        src="/images/Jesus Icon.png"
+        alt="Christ Icon"
+        width={500}
+        height={500}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-33 md:w-[650px] z-0 pointer-events-none select-none blur-[1px]"
+      />
 
         {/* Content Section */}
         <div className="max-w-4xl w-full flex flex-col items-center z-10">
