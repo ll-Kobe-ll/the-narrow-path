@@ -56,7 +56,7 @@ export default function AskReflectPage() {
 
         {submitted ? (
           <p className="text-green-400 text-center text-lg">
-            Thank you for your message. It's been received.
+            Thank you for your message. It&apos;s been received.
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
